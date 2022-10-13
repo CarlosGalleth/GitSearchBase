@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 :root{
     --color-brand-1: #C2255C;
@@ -14,4 +17,42 @@
     --color-grey-6:  #A6A8A9;
     --color-grey-7:  #FFFFFF;
     --color-alert:   #C22554;
+
+    --gap-1: 64px;
+    --gap-2: 48px;
+    --gap-3: 32px;
+    --gap-4: 24px;
+    --gap-5: 16px;
+
+    --radius-1: 8px;
+    --radius-2: 4px;
+}
+
+ul{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+}
+.dont-show{
+    display: none;
+}
+
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
 }

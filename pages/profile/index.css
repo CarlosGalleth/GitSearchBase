@@ -1,1 +1,86 @@
-/* Desenvolva sua estilização aqui...*/
+
+body{
+    background-color: var(--color-grey-2);
+    height: 100vh;
+}
+.container{
+    margin: 0 auto;
+    height: 100%;
+    width: 1000px;
+    color: white;
+}
+
+/* Topo */
+.top{
+    height: 90px;
+    margin: 80px 0;
+}
+.user-details{
+    gap: var(--gap-5);
+}
+.user-details > h3{ 
+    font-size: 24px;
+}
+.user-details > p{
+    color: rgba(255, 255, 255, 0.5);
+}
+.user-details-section{
+    gap: var(--gap-5);
+}
+.user-details-section > img{
+    width: 90px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-2);
+}
+.buttons-section{
+    gap: var(--gap-5);
+}
+.buttons-section > button{
+    color: white;
+    padding: 10px 24px;
+    border-radius: var(--radius-1);
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.button-email{
+    background-color: var(--color-brand-2);
+}
+.button-change-user{
+    background-color: var(--color-grey-3);
+}
+
+/* Repositórios */
+.repositories{
+    width: 100%;
+}
+.repository{
+    background-color: transparent;
+    width: 48.5%;
+    height: 280px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-1);
+    padding: 0 35px;
+    gap: var(--gap-3);
+    margin-bottom: 30px;
+}
+.repository:hover{
+    background-color: var(--color-grey-1);
+    border: 2px solid white;
+}
+.repository > p{
+    color: rgba(255, 255, 255, 0.6);
+}
+.repository-buttons{
+    gap: var(--gap-5);
+}
+.repository-buttons > button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--color-grey-6);
+    border-radius: var(--radius-2);
+    padding: 7px 12px;
+}
+.repository-buttons > button:hover{
+    background-color: var(--color-brand-2);
+}
