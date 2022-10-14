@@ -12,20 +12,20 @@
     <main class="container flex flex-col">
       <header class="top flex justify-between align-center">
         <section class="user-details-section flex align-center">
-          <img src="../home/assets-test/img-test.webp" alt="">
+          <img src="../home/assets-test/img-test.webp" id="user-img">
           <div class="user-details flex flex-col">
-            <h3>Samuel Leão</h3>
-            <p>UI Developer</p>
+            <h3 id="user-name">Samuel Leão</h3>
+            <p id="user-description">UI Developer</p>
           </div>
         </section>
         <section class="buttons-section flex">
-          <button class="button-email">Email</button>
+          <a href="" target="_blank" class="button-email">Email</a>
           <button class="button-change-user">Trocar de usuário</button>
         </section>
       </header>
 
       <ul class="repositories flex justify-between wrap">
-        <li class="repository flex flex-col justify-center">
+        <!--<li class="repository flex flex-col justify-center">
           <h3>Project Module 2 - Kenzie...</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -33,14 +33,14 @@
             tempore ea itaque eaque incidunt, nulla doloribus delectus
             culpa ipsam. Ad, quisquam porro.
           </p>
-          <div class="repository-buttons flex">
-            <button>Repositório</button>
+          <div class="repository-buttons flex"> 
+            <button class="btn-repository">Repositório</button>
             <button>Demo</button>
           </div>
-        </li>
+        </li>-->
       </ul>
 
     </main>
-    <script src="index.js"></script>
+    <script type="module" src="../../scripts/indexProfile.js"></script>
   </body>
 </html>

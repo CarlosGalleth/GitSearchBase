@@ -30,6 +30,7 @@
 }
 .founded-recently-list{
     gap: var(--gap-5);
+    flex-direction: row-reverse;
 }
 .founded-recently-list > img{
     width: 50px;
@@ -59,7 +60,21 @@
     color: white;
     height: 38px;
     border-radius: var(--radius-2);
+    border: none;
 }
 .not-found{
     color: var(--color-alert);
 }
+
+.spinner{
+    border: 20px solid var(rgb(0, 0, 0));
+    border-left-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: spin 2s;
+}
+
+@keyframes spin {
+    to {transform: rotate(720deg);}
+} 
