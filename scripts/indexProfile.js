@@ -34,20 +34,29 @@ function renderizarRepos(elem){
     let repos = document.getElementsByClassName("repositories")[0]
 
     elem.forEach(element => {
-
+        console.log(element)
         let li = document.createElement("li")
         li.classList = "repository flex flex-col justify-center"
+
         let h3 = document.createElement("h3")
         h3.innerText = element.name
+
         let p = document.createElement("p")
         p.innerText = element.description
+
         let div = document.createElement("div")
         div.classList = "repository-buttons flex"
-        let buttonRepo = document.createElement("button")
+
+        let buttonRepo = document.createElement("a")
         buttonRepo.innerText = "Repositório"
         buttonRepo.classList = "btn-repository"
-        let buttonDemo = document.createElement("button")
+        buttonRepo.href = element.html_url
+        buttonRepo.target = "_blank"
+
+        let buttonDemo = document.createElement("a")
         buttonDemo.innerText = "Demo"
+        buttonDemo.href = element.homepage
+        buttonDemo.target = "_blank"
 
         div.append(buttonRepo, buttonDemo)
         li.append(h3, p, div)

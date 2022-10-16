@@ -2,16 +2,36 @@
 
 
 async function getData() {
+    const notFoundAlert = document.getElementsByClassName("not-found")[0]
     const inputSearch = document.getElementById("search-user")
     const submitBtn = document.getElementById("submit")
     const baseUrl = "https://api.github.com/users"
 
+    if (inputSearch.value == "") {
+        submitBtn.disabled = true
+    }
+
+    inputSearch.addEventListener('input', () => {
+
+        if (inputSearch.value == "") {
+            submitBtn.disabled = true
+            notFoundAlert.classList.add("dont-show")
+        }
+        else{
+            submitBtn.disabled = false
+        }
+    })
+
     submitBtn.addEventListener('click', () => {
-        fetch(`${baseUrl}/${inputSearch.value}`)
+
+        if (inputSearch.value != "") {
+            buttonAnimation(submitBtn) 
+         }
+         setTimeout(() => {
+            fetch(`${baseUrl}/${inputSearch.value}`)
         .then(elem => elem.json())
         .then(elem => searchIsValid(elem))
-
-        buttonAnimation(submitBtn)
+         }, 1000)
     })
 }
 function buttonAnimation(btn){
@@ -28,7 +48,6 @@ function buttonAnimation(btn){
         btn.style.backgroundColor = "var(--color-brand-2)"
         btn.style.cursor = "pointer"
     }, 2000)
-
 }
 function searchIsValid(elem) {
     const notFoundAlert = document.getElementsByClassName("not-found")[0]

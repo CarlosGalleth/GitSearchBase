@@ -73,9 +73,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    animation: spin 2s;
+    animation: spin 1s;
 }
 
 @keyframes spin {
-    to {transform: rotate(720deg);}
+    to {transform: rotate(360deg);}
 } 

@@ -78,7 +78,7 @@ body{
 .repository-buttons{
     gap: var(--gap-5);
 }
-.repository-buttons > button{
+.repository-buttons > a{
     background-color: transparent;
     color: white;
     border: 1px solid var(--color-grey-6);
