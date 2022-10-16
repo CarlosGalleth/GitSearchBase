@@ -22,7 +22,7 @@ function renderizarInformacoes() {
     userImg.src = userParse.avatar_url
 
     btnEmail.addEventListener('click', () => {
-        btnEmail.href = userParse.html_url
+        btnEmail.href = userParse.email
     })
 
     fetch(userParse.repos_url)
@@ -34,7 +34,6 @@ function renderizarRepos(elem){
     let repos = document.getElementsByClassName("repositories")[0]
 
     elem.forEach(element => {
-        console.log(element)
         let li = document.createElement("li")
         li.classList = "repository flex flex-col justify-center"
 
